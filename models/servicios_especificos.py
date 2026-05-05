@@ -1,4 +1,4 @@
-from servicio import Servicio
+from models.servicio import Servicio
 
 class ReservaSala(Servicio):
     """
