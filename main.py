@@ -5,10 +5,10 @@ Este módulo ejecuta una simulación completa del sistema,
 incluyendo creación de clientes, servicios, reservas y manejo de errores.
 """
 
-from cliente import Cliente
-from servicios_especificos import ReservaSala, AlquilerEquipo, Asesoria
-from reserva import Reserva
-from logger import registrar_log
+from models.cliente import Cliente
+from models.servicios_especificos import ReservaSala, AlquilerEquipo, Asesoria
+from models.reserva import Reserva
+from utils.logger import registrar_log
 
 
 def main():
