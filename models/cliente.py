@@ -1,4 +1,4 @@
-from entidad import Entidad
+from models.entidad import Entidad
 
 class Cliente(Entidad):
     """
