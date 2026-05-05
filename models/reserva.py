@@ -1,9 +1,20 @@
 from datetime import datetime
-from exceptions.custom_exceptions import ReservaError
 from utils.logger import registrar_log
+from exceptions.custom_exceptions import ReservaError
 
 class Reserva:
+    """
+    Representa una reserva en el sistema.
+    """
+
     def __init__(self, cliente, servicio):
+        """
+        Inicializa una reserva.
+
+        Args:
+            cliente (Cliente)
+            servicio (Servicio)
+        """
         if cliente is None or servicio is None:
             raise ValueError("Cliente o servicio inválido")
 
@@ -13,6 +24,12 @@ class Reserva:
         self.fecha = datetime.now()
 
     def confirmar(self):
+        """
+        Confirma la reserva calculando el costo.
+
+        Returns:
+            str
+        """
         try:
             costo = self.servicio.calcular_costo()
         except Exception as e:
@@ -25,5 +42,11 @@ class Reserva:
             registrar_log("Intento de confirmación ejecutado")
 
     def cancelar(self):
+        """
+        Cancela la reserva.
+
+        Returns:
+            str
+        """
         self.estado = "cancelada"
         return "Reserva cancelada"
