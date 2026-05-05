@@ -1,0 +1,6 @@
+Cliente inválido: Nombre inválido
+Servicio inválido: Horas inválidas
+Intento de confirmación ejecutado
+Intento de confirmación ejecutado
+Intento de confirmación ejecutado
+Reserva inválida: Cliente o servicio inválido
